@@ -156,15 +156,43 @@ plot_data$Parameter <- factor(plot_data$Parameter,
                                          "Infected",
                                          "Recovered"))
 
+# Theme
+my_theme <- function(base_size = 12,
+                     base_family = "") {
+  theme_minimal(base_size = base_size,
+                base_family = base_family) %+replace%
+    theme(
+      panel.grid.minor = element_blank(),
+      panel.grid.major.x = element_blank(),
+      panel.grid.major.y  =  element_line(
+        colour = "#c9c0b7",
+        linetype = "dotted",
+        size = .5),
+      axis.ticks = element_line(size = .5, colour = "#c9c0b7"),
+      axis.ticks.x = element_blank(),
+      axis.line = element_line(
+        size = .5,
+        colour = "#c9c0b7",
+        linetype = "solid"),
+      axis.line.y = element_blank(),
+      axis.text.y = element_text(colour = "black", 
+                                 margin = margin(r = 2), hjust = 1),
+      axis.text.x = element_text(colour = "black"),
+      # we done here
+      complete = TRUE)
+}
+
+
 ggplot(data = plot_data,
        aes(x = Time,
            y = Value)) +
   geom_line(size = 1.5,
             colour = "#e64173") +
   facet_grid( ~ Parameter) +
-  theme_minimal(base_size = 15) +
+  my_theme(base_size = 15) +
   theme(plot.margin = unit(c(1, 1, 1, 1), "cm")) +
   geom_hline(yintercept = 0) +
+  scale_y_continuous(expand = c(0, 0), limits = c(0,1000)) +
   xlab("Number of Days") +
   ylab("Number of People") +
   labs(
@@ -173,4 +201,4 @@ ggplot(data = plot_data,
     caption = "Zaeen de Souza")
 
 ggsave("plot1.pdf", width = 10, height = 8)
-
+ggsave("plot1.png", width = 10, height = 8, dpi = 999, units = "in")
