@@ -163,12 +163,15 @@ ggplot(data = plot_data,
   geom_line(size = 1.5,
             colour = "#e64173") +
   facet_grid( ~ Parameter) +
-  theme_pander(base_size = 15) +
+  theme_minimal(base_size = 15) +
   theme(plot.margin = unit(c(1, 1, 1, 1), "cm")) +
   geom_hline(yintercept = 0) +
   xlab("Number of Days") +
   ylab("Number of People") +
   labs(
     title = "The Spread of Infectious Disease",
-    subtitle = paste("Time =", Time, "\nPopulation =", Population),
+    subtitle = paste("Time Periods =", Time, "\nPopulation Size =", Population),
     caption = "Zaeen de Souza")
+
+ggsave("plot1.pdf", width = 10, height = 8)
+
