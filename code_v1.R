@@ -200,5 +200,4 @@ ggplot(data = plot_data,
     subtitle = paste("Time Periods =", Time, "\nPopulation Size =", Population),
     caption = "Zaeen de Souza")
 
-ggsave("plot1.pdf", width = 10, height = 8, dpi = 999, units = "in")
-ggsave("plot1.png", width = 10, height = 8, dpi = 999, units = "in")
+ggsave("plot1.pdf", width = 10, height = 8)
