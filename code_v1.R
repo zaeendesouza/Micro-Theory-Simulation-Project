@@ -1,8 +1,6 @@
 #------------------------------------------------------------------------------#
-# Subject: Advanced Micro Theory
-# Assignment: Preliminary code for simulation (Work in Progress)
+# Preliminary code for simulation (Work in Progress)
 # Topic: Spread of Infectious Disease
-# Name: Zaeen de Souza
 # Date: 04-06-2021
 
 
