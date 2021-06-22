@@ -142,8 +142,7 @@ Output <- Output %>%
     Exposed = E,
     Susceptible = S,
     Infected = I,
-    Recovered = R
-  )
+    Recovered = R)
 
 
 # Reshaping the data, and ordering it via the factor function, so its easier to plot.
