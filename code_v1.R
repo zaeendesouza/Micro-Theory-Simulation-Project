@@ -28,11 +28,6 @@ rm(list = ls())
 # Setup pt.1: Will take just 3-5 mins to install - just needed once. Can comment out after installing.
 
 
-# update: added "tidyr" package as well
-# library(pacman)
-# p_load(ggthemes, tidyverse)
-
-
 # install.packages("tidyr", dependencies = T)
 # install.packages("ggplot", dependencies = T)
 # install.packages("dplyr", dependencies = T)
