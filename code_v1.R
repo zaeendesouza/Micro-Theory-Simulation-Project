@@ -11,7 +11,7 @@
 # 2. Adding recoveries and re-infections
 # 3. Adding some kind of vaccine after some point in time - make it harder
 # to get infected
-# 4. Convert the entire thing to a function - so user can specify parameter values
+# 4. Converting it all to a function - so user can specify parameter values
 #------------------------------------------------------------------------------#
 
 
