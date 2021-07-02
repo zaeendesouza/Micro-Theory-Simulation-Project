@@ -66,8 +66,7 @@ for (i in 2:Population) {
   Agent1 <- rbind(Agent1, Agent2)
 }
 
-# This sets the number of time periods - and then populates a dataframe with Time number of rows - each row is one time period.
-Time <- 50
+# This populates a dataframe with Time number of rows - each row is one time period, based on pre-defined time parameter
 Output <- data.frame(
   S = rep(0, Time),
   E = rep(0, Time),
